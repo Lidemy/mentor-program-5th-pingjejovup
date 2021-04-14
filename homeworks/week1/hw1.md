@@ -6,4 +6,5 @@
 3.  將所有更改的檔案加入 stage（暫存區） ``` git add . ```
 4.  將所有變更文件提交 commit 加上 message ``` git commit -m "message" ```
 5. 最後再 push  到 github repo 上 ``` git push ```
+6. push 上去後到 github 按下 homework 分支 按下 ``` pull request ``` 按鈕
 
