@@ -1,3 +1,4 @@
+/* eslint-disable */
 function join(arr, concatStr) {
   let res = ''
   arr.forEach((element,i) => {
@@ -20,12 +21,4 @@ function repeat(str, times) {
 }
 
 console.log(join(['a'], '!'));
-console.log(join([1, 2, 3], ''));
-// 正確回傳值：123
-console.log(join(["a", "b", "c"], "!"));
-// 正確回傳值：a!b!c
-console.log(join(["a", 1, "b", 2, "c", 3], ','));
-// 正確回傳值：a, 1, b, 2, c, 3
-
 console.log(repeat('a', 5));
-console.log(repeat('yoyo', 2));

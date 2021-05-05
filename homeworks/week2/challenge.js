@@ -1,3 +1,4 @@
+/* eslint-disable */
 function search(arr, n) {
   let middle = Math.round((arr.length - 1) / 2);
   var times = Math.round((arr.length + 1) / 2);
@@ -11,19 +12,12 @@ function search(arr, n) {
     if (n == arr[middle]) {
       return middle
     } else if (n > arr[middle]) {
-
       middle = Math.round((arr.length - 1 + middle) / 2);
-      // console.log('b', middle);
-
     } else {
       middle = Math.round((middle) / 2);
-      // console.log('s', middle);
     }
     
   }
-
-  
-  // return arr.indexOf(n)
   return -1
 }
 
