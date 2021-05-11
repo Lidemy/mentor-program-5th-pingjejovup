@@ -17,12 +17,10 @@ rl.on('close', () => {
 
 function solve(lines) {
   lines.forEach((n) => {
-    if (1 <= n && n <= 30) {
-      let text = ''
-      for (let i = 0; i < n; i++) {
-        text += '*'
-        console.log(text)
-      }
+    let text = ''
+    for (let i = 0; i < n; i++) {
+      text += '*'
+      console.log(text)
     }
   })
 }

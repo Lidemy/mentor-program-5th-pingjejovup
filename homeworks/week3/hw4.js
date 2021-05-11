@@ -17,13 +17,7 @@ rl.on('close', () => {
 
 function solve(lines) {
   const input = lines[0]
-  if (1 <= input.length && input.length <= 100) {
-    const stringArr = input.split('')
-    const reverseWord = stringArr.reverse().join('')
-    if (reverseWord === input) {
-      console.log('True')
-    } else {
-      console.log('False')
-    }
-  }
+  const stringArr = input.split('')
+  const reverseWord = stringArr.reverse().join('')
+  console.log(reverseWord === input ? 'True' : 'False')
 }
