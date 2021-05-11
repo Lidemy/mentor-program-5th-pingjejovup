@@ -1,13 +1,13 @@
 ``` js
-function isValid(arr) {
-  for(var i=0; i<arr.length; i++) {
-    if (arr[i] <= 0) return 'invalid'
-  }
-  for(var i=2; i<arr.length; i++) {
-    if (arr[i] !== arr[i-1] + arr[i-2]) return 'invalid'
-  }
-  return 'valid'
-}
+1function isValid(arr) {
+2 for(var i=0; i<arr.length; i++) {
+3   if (arr[i] <= 0) return 'invalid'
+4  }
+5  for(var i=2; i<arr.length; i++) {
+6    if (arr[i] !== arr[i-1] + arr[i-2]) return 'invalid'
+7  }
+8  return 'valid'
+9}
 
 isValid([3, 5, 8, 13, 22, 35])
 ```
@@ -33,9 +33,5 @@ isValid([3, 5, 8, 13, 22, 35])
 17.  第一圈迴圈結束，跑回第五行，i++，i 變成 3，檢查是否 < 6，是，繼續執行第二個迴圈
 18. 執行第六行，判斷是否 arr 的第 3 個 index 位置值（13）不等於 第 2 個加第 1 個值 ( 13 )，否，不回傳 
 19.  第二圈迴圈結束，跑回第五行，i++，i 變成 4，檢查是否 < 6，是，繼續執行第三個迴圈
-20. 執行第六行，判斷是否 arr 的第 4 個 index 位置值（22）不等於 第 3 個加第 2 個值 ( 22 )，否，不回傳
-21. 第三圈迴圈結束，跑回第五行，i++，i 變成 5，檢查是否 < 6，是，繼續執行第四個迴圈
-22. 執行第六行，判斷是否 arr 的第 5 個 index 位置值（35）不等於 第 4 個加第 3 個值 ( 35 )，否，不回傳
-23. 第四圈迴圈結束，跑回第五行，i++，i 變成 6，檢查是否 < 6，否，不執行迴圈
-24. 執行第 8 行，回傳 “valid”
-25. 執行完畢
+20. 執行第六行，判斷是否 arr 的第 4 個 index 位置值（22）不等於 第 3 個加第 2 個值 ( 21 )，是，回傳 "invalid"
+25. 執行完畢，終止執行程式
