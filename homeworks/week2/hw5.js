@@ -1,3 +1,4 @@
+/* eslint-disable */
 function join(arr, concatStr) {
   let res = ''
   arr.forEach((element, i) => {
@@ -17,6 +18,5 @@ function repeat(str, times) {
   return res
 }
 
-console.log(join([1, 2, 3], ''))
-// 正確回傳值：123
-console.log(repeat('yoyo', 2))
+console.log(join(['a'], '!'));
+console.log(repeat('a', 5));

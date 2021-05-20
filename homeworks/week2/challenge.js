@@ -1,3 +1,4 @@
+/* eslint-disable */
 function search(arr, n) {
   let middle = Math.round((arr.length - 1) / 2)
   const times = Math.round((arr.length + 1) / 2)
@@ -9,9 +10,9 @@ function search(arr, n) {
     if (n === arr[middle]) {
       return middle
     } else if (n > arr[middle]) {
-      middle = Math.round((arr.length - 1 + middle) / 2)
+      middle = Math.round((arr.length - 1 + middle) / 2);
     } else {
-      middle = Math.round((middle) / 2)
+      middle = Math.round((middle) / 2);
     }
   }
   return -1
