@@ -6,3 +6,6 @@
 ###Lidemy HTTP Challenge 解題心得
 這個遊戲真的設計得很有趣，透過 get / post 取的線索來解 RPG ，這個關卡我是用 Postman 來解謎，真的蠻方便的尤其要在 header 塞入一些 key-value 很方便，也學到 header 的 Authorization，後來一路順利破解到 10 關，也接著繼續挑戰 11 關 {IhateCORS} : cors 同源問題 ，而為了解決這個問題，上網找了解法，用 postman 在 header 加入 Origin ，而 value 填上要同源的網址，就能獲取 response 了。第 12 關 {r3d1r3c7} : 透過提示才知道有轉址過程，因為傳送之後中間有轉址，但不確定能否從 postman 擷取中間的資訊 (還沒研究出來)，於是轉用 termianl 下 crul 指令  ``` curl -v GET url ```  來獲取全部資訊才從中找到藏在轉址 header 中的  ``` X-Lv13-Token: {qspyz} ``` 。第 13 關 {qspyz} : 只允許來自菲律賓的 request，所以研究了一下怎麼在 postman 設定 proxy ，在網路找到免費的來自菲律賓 IP address，在 postman 設定 proxy 後就成功獲取了，不過好像還有可以設定環境參數 ``` http_proxy``` 的方法，打算之後再來研究。第 14 關 {SEOisHard} :  這一關我也是看完題目就沒方向卡住了，直接看提示才恍然大悟，所以搜尋了一下發現 google 有整理一系列 Google 檢索器的使用者代理程式字串，其中試錯了幾個才發現是 Googlebot Desktop 這個 Agent
 才解完。總歸這個遊戲真的很有趣，不過從中應該有很多衍生的相關知識我都還有點一知半解，不過覺得至少知道運用 postman 跟 curl 這兩個工具了。
+
+### LIOJ 題目：1016, 1017 以及 1018
+在解  LIOJ 題目時，常常發生 wrong 的原因就是一些特殊情況的測資沒有通過，而且也不清楚關卡的測資有哪些，所以只能靠自己 Try and Error，還是其實有地方可以查看只是我沒發現呢？像是在 1016 裡自己也是忘了考慮有可能全部 Ａ 或是全部 Ｂ 的情況。然後在 1017 是卡最久的，幾乎花了一個下午一直卡住，直到網路查到有人分享了測資，其中有值有 10 ，看 log發現有誤，才發現在 javascript sort() 是對於 string 第一個字做排序，把‘10' 的 '1' 去做排序，才知道要數字的排序要另外寫 function 去 sort，再來還有發現如果能偷的是量是 0 要 log(0)。忘了邊界數值。所以常常寫程式最常出現 bug 就是這些地方，常常有邊界數值，或特殊情況要考慮。 
