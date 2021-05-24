@@ -1,8 +1,8 @@
 const axios = require('axios')
 
-const hostUrl = 'https://lidemy-book-store.herokuapp.com'
-const getUrl = '/books'
-const limitNum = '?_limit=30'
+const BASE_URL = 'https://lidemy-book-store.herokuapp.com'
+const GET_URL = '/books'
+const queryString = '?_limit=30'
 const params = process.argv
 
 const thefunc = params[2]
@@ -11,49 +11,49 @@ const theUpdateArgs = params[4]
 
 const exeFunc = {
   list: () => {
-    axios.get(hostUrl + getUrl + limitNum)
+    axios.get(BASE_URL + GET_URL + queryString)
       .then((response) => {
-        response.data.map((x) => console.log(printBooks(x)))
+        response.data.map((x) => printBooks(x))
       })
       .catch((error) => {
         console.log('Err:', error)
       })
   },
   read: (bookID) => {
-    axios.get(`${hostUrl + getUrl}/${bookID}`)
+    axios.get(`${BASE_URL + GET_URL}/${bookID}`)
       .then((response) => {
-        console.log(printBooks(response.data))
+        printBooks(response.data)
       })
       .catch((error) => {
         console.log('Err:', error)
       })
   },
   delete: (bookID) => {
-    axios.delete(`${hostUrl + getUrl}/${bookID}`)
+    axios.delete(`${BASE_URL + GET_URL}/${bookID}`)
       .then((response) => {
-        // console.log(response);
+        console.log('success')
       })
       .catch((error) => {
         console.log(error)
       })
   },
   create: (bookName) => {
-    axios.post(hostUrl + getUrl, {
+    axios.post(BASE_URL + GET_URL, {
       name: bookName
     })
       .then((response) => {
-        // console.log(response);
+        console.log('success')
       })
       .catch((error) => {
         console.log(error)
       })
   },
   update: (bookID, bookName) => {
-    axios.patch(`${hostUrl + getUrl}/${bookID}`, {
+    axios.patch(`${BASE_URL + GET_URL}/${bookID}`, {
       name: bookName
     })
       .then((response) => {
-        // console.log(response);
+        console.log('success')
       })
       .catch((error) => {
         console.log(error)
@@ -63,6 +63,6 @@ const exeFunc = {
 }
 
 function printBooks(book) {
-  return `${book.id} ${book.name}`
+  console.log(`${book.id} ${book.name}`)
 }
 exeFunc[thefunc](theArgs, theUpdateArgs)
