@@ -18,9 +18,10 @@ h2{
 }
 .wrapper{
   margin: 0 auto;
-  max-width: 1280px;
+  max-width: 1280px;
   padding: 0 12px;
 }
+
 @media (max-width: 768px) {
   .navbar .wrapper{
     height: 100px;
@@ -49,12 +50,32 @@ h2{
     border-radius: 0;
     margin: 0;
   }
-  .btn-query{
+  .buttons .btn-order{
+    margin: 0;
+  }
+  .buttons .btn-query{
     margin: 0;
     margin-top: 8px;
   }
+  .section .section-images>div{
+    width: 100%;
+  }
   .section-images {
     flex-direction: column;
+  }
+  .footer-top .wrapper{
+    flex-direction: column-reverse;
+  }
+  .footer-info{
+    margin-right: 0;
+    margin-top: 16px;
+  }
+  .comment-wrapper .comment-box{
+    width: 100%;
+    flex: unset;
+  }
+  .comment-box+.comment-box{
+    margin-top: 90px;
   }
   
 }
@@ -154,4 +175,82 @@ background-color: #f9f9b5;
 }
 .section-images img{
   width: 100%;
+}
+footer{
+  margin-top: 48px;
+  background-color: #e8efee;
+}
+.footer-top{
+  padding: 32px 0;
+  color: #484848;
+}
+.footer-info{
+  margin-right: 16px;
+}
+.footer-info p{
+  font-size: 14px;
+  color: #484848;
+}
+.footer-top .wrapper{
+  max-width: 1280px;
+  display: flex;
+  justify-content: space-between;
+}
+.footer-title .logo-title{
+  font-size: 36px;
+  color: #489846;
+
+}
+.footer-bottom{
+  background-color: #35564b;
+  padding: 12px 0;
+  text-align: center;
+  color: #fff;
+  font-size: 16px;
+  padding: 10px 12px;
+}
+.comment-wrapper{
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 48px;
+}
+.comment-box{
+  flex:1;
+  box-sizing: border-box;
+  width: 33.2%;
+  padding: 0 8px;
+  text-align: center;
+  position: relative;
+}
+.comment-box::after{
+  content: '';
+  display: block;
+  position: absolute;
+  width: calc(100% - 16px);
+  top: 0;
+  bottom: 0;
+  box-shadow: -1.4px -1.4px 4px 0 var(--light-blue-grey);
+  border-radius: 5px;
+  border: solid 1px #c7e5ec;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: -1;
+}
+.comment-box>div{
+  padding: 65px 10px 30px 10px;
+  position: relative;
+  height: inherit;
+}
+.avatar{
+  width: 100px;
+  position: absolute;
+  left: 50%;
+  top: 0;
+  transform: translate(-50%, -50%);
+}
+.avatar img{
+  width: 100%;
+}
+.comment-box p{
+  line-height: 1.5;
 }
