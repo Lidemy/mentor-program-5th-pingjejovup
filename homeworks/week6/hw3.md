@@ -29,7 +29,7 @@ inline-block 及介於 inline 和 block 屬性之間，同 inline 元素不會�
 此時，元素的本來在 html 所佔的位置和體積仍不變，而 left | right | top | bottom | z-index 這些相應的屬性就起作用，這時所設定的位移是根據原本元素的位置去作相對位移。
 
 ### absolute
-當元素 position 設置 absolute ，元素就不在原本的 html 上的階層，原本所占的元素體積也跳脫了，而 left | right | top | bottom | z-index ，所設定的值會向外找有設定 position: relative 的元素作為父元素，然後會根據父元素的 box model 去做相對位移。
+當元素 position 設置 absolute ，元素就不在原本的 html 上的階層，原本所占的元素體積也跳脫了，而 left | right | top | bottom | z-index ，所設定的值會向外找 position 非 static 的元素作為父元素，然後會根據父元素的 box model 去做相對位移。
 
 ### fixed
 其特性與 absolute 相似，差別在於其設定位移的值是相對於整個瀏覽視窗，並不會被捲軸拖拉影響，固定在
