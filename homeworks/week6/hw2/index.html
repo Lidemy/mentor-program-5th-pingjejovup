@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>新拖延運動報名表單</title>
+  
+  <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+  <div class="wrapper">
+    <header>
+      <h1>
+        新拖延運動報名表單
+      </h1>
+      <p>活動日期：2020/12/10 ~ 2020/12/11</p>
+      <p>活動地點：台北市大安區新生南路二段1號</p>
+      <p class="alert">* 必填</p>
+    </header>
+    <form action="#" id='signUpform'>
+    <div class="input-group">
+      <label for="" class="input-title required">暱稱</label>
+      <input type="text" placeholder="您的回答" required>
+    </div>
+    <div class="input-group">
+      <label for="" class="input-title required">電子郵件</label>
+      <input type="email" placeholder="您的電子郵件" required>
+    </div>
+    <div class="input-group">
+      <label for="" class="input-title required">手機號碼</label>
+      <input type="text" placeholder="您的手機號碼" required>
+    </div>
+    <div class="input-group">
+      <label for="" class="input-title required">報名類型</label>
+      <div class="radio-group">
+        <input type="radio" id="Choice1" name="registerType" value="email">
+        <label for="Choice1">躺在床上用想像力實作</label>
+      </div>
+    <div class="radio-group">  
+      <input type="radio" id="Choice2" name="registerType" value="phone">
+      <label for="Choice2">趴在地上滑手機找現成的</label>
+    </div>
+    </div>
+    <div class="input-group">
+      <label for="" class="input-title required">怎麼知道這個活動的？</label>
+      <input type="text" placeholder="您的回答" required>
+    </div>
+    <div class="input-group">
+      <label for="" class="input-title">其他</label>
+      <p>對活動的一些建議</p>
+      <input type="text" placeholder="您的回答">
+    </div>
+    <button type="submit" form="signUpform" value="Submit">提交</button>
+      <p>請勿透過表單送出您的密碼。</p>
+
+    </form>
+  </div>
+
+</body>
+</html>

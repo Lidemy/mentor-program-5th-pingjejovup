@@ -1,0 +1,115 @@
+button, input[type=submit], input[type=reset] {
+  background: none;
+  color: inherit;
+  border: none;
+  padding: 0;
+  font: inherit;
+  cursor: pointer;
+  outline: inherit;
+}
+
+html {
+  border-top: 6px solid #fad312;
+}
+
+.wrapper {
+  max-width: 1280px;
+  margin: 0 auto;
+}
+.wrapper h1 {
+  font-size: 36px;
+}
+.wrapper header {
+  margin-bottom: 60px;
+}
+.wrapper header p {
+  font-size: 15px;
+  margin: 8px 0;
+}
+.wrapper header p.alert {
+  margin-top: 12px;
+  color: #e74149;
+}
+
+.radio-group {
+  margin-bottom: 10px;
+}
+.radio-group input[type=radio] {
+  border: none;
+  outline: none;
+  background-color: #ccc;
+}
+.radio-group label {
+  position: relative;
+}
+.radio-group input[type=radio] {
+  visibility: hidden;
+}
+.radio-group label::after {
+  content: "";
+  position: absolute;
+  display: block;
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background-color: #d0d0d0;
+  border: 1px solid #d0d0d0;
+  left: -20px;
+  top: 50%;
+  transform: translateY(-50%);
+}
+.radio-group input[type=radio]:checked + label::after {
+  background-color: #fff;
+  border-radius: 50%;
+  border: 1px solid #0059ff;
+}
+.radio-group input[type=radio]:checked + label::before {
+  content: "";
+  position: absolute;
+  display: block;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background-color: #0059ff;
+  left: -17px;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 3;
+}
+
+.input-group {
+  padding: 20px 0px;
+  margin-bottom: 25px;
+}
+.input-group .input-title {
+  color: #222;
+  font-size: 20px;
+  display: block;
+  margin-bottom: 15px;
+}
+.input-group input {
+  font-size: 16px;
+  padding: 5px 223px 3px 1px;
+  border: solid 1px #d0d0d0;
+}
+.input-group input::-moz-placeholder {
+  color: #afafaf;
+}
+.input-group input:-ms-input-placeholder {
+  color: #afafaf;
+}
+.input-group input::placeholder {
+  color: #afafaf;
+}
+.input-group label.required::after {
+  content: "*";
+  color: #e74149;
+  padding-left: 5px;
+}
+
+button {
+  padding: 13px 32px;
+  background-color: #fad312;
+  border-radius: 5px;
+  box-shadow: none;
+}/*# sourceMappingURL=style.css.map */
